@@ -4,6 +4,7 @@ This project encompasses three distinct phases, each contributing to the develop
 
 ---
 
+
 ## Phase 1: CatBoost Model for Cirrhosis Prediction
 
 Phase 1 focuses on building a predictive model for cirrhosis using the CatBoost algorithm. This phase involves data preprocessing, exploratory data analysis (EDA), model development, and performance evaluation. 
@@ -26,6 +27,7 @@ EDA includes histograms, box plots, feature selection, data splitting, model tra
 </details>
 
 ---
+
 
 ## Phase 2: Decision Tree Classifier for Cirrhosis Prediction
 
@@ -58,6 +60,7 @@ Performance metrics, including accuracy, a confusion matrix heatmap, and a compr
 </details>
 
 ---
+
 
 ## Phase 3: Survival Analysis and Artificial Neural Network (ANN) for Cirrhosis Prediction
 
@@ -102,6 +105,7 @@ A binary classification threshold is introduced, and key performance metrics, in
 
 In summary, this project encompasses three phases, each building upon the previous one, to develop an effective cirrhosis prediction model. These phases encompass data preprocessing, exploratory data analysis, model development, and thorough performance evaluation.
 
+
 ## How to Run
 To run this project on your local environment, follow these steps:
 
@@ -113,12 +117,14 @@ To run this project on your local environment, follow these steps:
 
 3. **Execute the provided Python script to run the project.**
 
+
 ## Additional Model Performance Metrics
 This project goes beyond basic accuracy and incorporates advanced performance metrics. These include:
 
 - **ROC Curves:** Receiver Operating Characteristic curves offer a graphical representation of the model's ability to distinguish between classes. We calculate the ROC curve and Area Under the Curve (AUC) to assess the model's binary classification performance.
 
 - **Precision-Recall Curves:** Precision-Recall curves provide insights into the precision and recall trade-off. They are particularly important for imbalanced datasets and are used alongside the ROC curve for comprehensive model evaluation.
+
 
 ## Next Steps
 To further enhance this project, consider the following actions:
