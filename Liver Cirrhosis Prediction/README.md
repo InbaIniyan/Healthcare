@@ -1,73 +1,86 @@
-# Thyroid Cancer Diagnosis Prediction
+# Phase 1: CatBoost Model for Cirrhosis Prediction
 
 ## Introduction
-This project aims to predict the likelihood of a thyroid cancer diagnosis using a deep learning model. It encompasses the following key steps:
+Phase 1 of this project focuses on developing a predictive model for cirrhosis using the CatBoost algorithm. This phase entails comprehensive data preprocessing, exploratory data analysis (EDA), model development, and rigorous performance evaluation. Below is a detailed account of the steps taken in this phase.
 
-## Step 1: Load and Prepare Data
-In this initial step, we load the dataset from the 'Thyroid_train.csv' file. The features are meticulously prepared for training the model. The dataset is divided into both training and testing sets to assess model performance. Feature scaling is applied using the StandardScaler to ensure that the features are on a similar scale, which is crucial for many machine learning and deep learning algorithms.
+## 1. Importing Libraries
+In the initial stage of our project, we imported the following libraries to facilitate data processing, visualization, and machine learning:
 
-## Step 2: Exploratory Data Analysis (EDA)
-Extensive exploratory data analysis is conducted to gain a comprehensive understanding of the dataset. This in-depth analysis involves several sub-steps:
+- **pandas**: Used for data manipulation and management.
+- **matplotlib and seaborn**: Employed for data visualization and creating insightful plots.
+- **sklearn (Scikit-learn)**: Provides various machine learning tools, such as train-test splitting and standardization.
+- **catboost**: Utilized for training the CatBoost regression model, a powerful gradient boosting algorithm.
 
-- **Summary Statistics:** We calculate essential statistics such as mean, median, standard deviation, and quartiles for each feature. This helps us get a sense of the data's central tendencies and spread.
+## 2. Loading Dataset
+We began by loading the cirrhosis dataset from the 'cirrhosis.csv' file using pandas. This dataset contains valuable information for our predictive modeling task.
 
-- **Class Distribution:** Understanding the distribution of the target variable (diagnosis) is pivotal. We count the occurrences of each class (benign and malignant) to ensure our dataset's balance.
+## 3. Data Preprocessing
+### i) Handling Missing Values for Numeric Columns
+To address missing values in numeric columns, we applied the following steps:
 
-- **Data Visualization:** To visualize the data distribution and relationships, we create visualizations. This includes histograms, scatter plots, and pair plots to identify trends and patterns.
+- Identified numeric columns in the dataset.
+- Calculated the mean for each numeric column and imputed missing values with the corresponding means. This approach preserves the statistical characteristics of the data.
 
-- **Correlation Analysis:** To uncover the relationships between features, we generate a correlation matrix and visualize it with a heatmap. This is essential for feature selection and understanding multicollinearity.
+### ii) Handling Missing Values for Categorical Columns
+For categorical columns, the process involved:
 
-- **Handling Missing Data:** We check for any missing data points and decide on an appropriate strategy for handling them. Ensuring a complete dataset is essential for model training.
+- Identifying categorical columns in the dataset.
+- Replacing missing categorical values with the mode (most frequent value) of each respective column.
 
-- **Outlier Detection:** Outliers can skew our model's performance. We detect and visualize outliers, allowing us to decide whether to remove or transform them.
+### iii) Encoding Categorical Variables
+To prepare the dataset for machine learning, we one-hot encoded the categorical variables, transforming them into a numerical format. This step ensures that the model can utilize these features effectively.
 
-- **Hypothesis Testing:** We conduct hypothesis testing, such as the T-test, to assess the significance of differences between groups or classes within the data.
+## 4. Data Splitting
+To evaluate our model's performance, we split the dataset into training, validation, and test sets. We used the following split ratios:
 
-## Step 3: Model Building
-The heart of this project is the deep learning model, built using TensorFlow and Keras. The architecture of the model is designed for binary classification, with the following layers:
+- 70% of the data for training.
+- 15% for validation.
+- 15% for testing.
 
-- **Input Layer:** The input layer has the same number of neurons as the input features. It uses the ReLU (Rectified Linear Unit) activation function.
-- **Hidden Layer:** This hidden layer with 32 neurons uses the ReLU activation function.
-- **Output Layer:** The output layer has a single neuron with a sigmoid activation function, producing binary classification predictions (0 for benign and 1 for malignant).
+## 5. Feature Scaling
+Feature scaling is a crucial preprocessing step to ensure that all features have a similar scale. We utilized the StandardScaler from sklearn to standardize the features, making them suitable for CatBoost.
 
-## Step 4: Model Compilation
-The model is compiled with essential components to ensure its efficiency:
+## 6. Exploratory Data Analysis (EDA)
+### i) Histogram for Numeric Variables
+To gain insights into the distribution of numeric variables, we created histograms with 20 bins. These visualizations allow us to assess data density and observe data spread.
 
-- **Optimizer:** We use the 'adam' optimizer, which adapts the learning rate during training for faster convergence.
-- **Loss Function:** Binary cross-entropy loss is selected, suitable for binary classification tasks.
-- **Evaluation Metric:** Accuracy is chosen as the evaluation metric to assess model performance.
+### ii) Boxplots for Numeric Variables
+Box plots were constructed for numeric variables, providing a comprehensive view of the data's central tendency, spread, and potential outliers. Understanding the distribution of numeric features is essential for model development.
 
-## Step 5: Model Training
-The model is trained using the prepared data. We execute 50 epochs with a batch size of 32, and we employ a 20% validation split during training to monitor model performance.
+### iii) Count Plots for Categorical Variables
+For categorical variables, count plots were generated, focusing on the "Status" feature. This enabled us to visualize the distribution of cirrhosis statuses.
 
-## Step 6: Model Evaluation
-In this final step, the model's performance is assessed using the testing data. We report the test accuracy, which reveals the model's ability to correctly classify thyroid cancer cases.
+## 7. Correlation Analysis
+We conducted a correlation analysis to identify relationships between variables. The correlation matrix was visualized using a heatmap, providing a clear view of variable dependencies and interactions.
 
-## How to Run
-To run this project on your local environment, follow these steps:
+## 8. Target Variable Distribution
+We used a count plot to visualize the distribution of the target variable, "Stage." Understanding the distribution of cirrhosis stages is essential for model evaluation and interpretation.
 
-1. Ensure you have the required libraries installed. You can install them using pip:
+## 9. Feature Relationships
+### i) Scatter Plots for Numeric Features
+To explore the relationship between "Bilirubin" and the target variable "Stage," we created scatter plots. This visualization helps us understand how "Bilirubin" affects cirrhosis stage.
 
-        pip install pandas numpy tensorflow scikit-learn matplotlib seaborn
+### ii) Categorical Feature Analysis
+We conducted a categorical feature analysis by creating contingency tables for gender ("Sex") and "Stage." These tables provided insights into how gender relates to cirrhosis stage.
 
-2. Download the dataset 'Thyroid_train.csv' and place it in the project directory.
+## 10. Outlier Detection
+We utilized box plots to detect outliers in the "Age" column. Identifying outliers is essential for model robustness and accurate predictions.
 
-3. Execute the provided Python script to run the project.
+## 11. Feature Engineering
+Feature engineering is a crucial step in model development. In this phase, we engineered a new feature, "BMI," based on "Age" and "Cholesterol." This feature enhances the dataset's predictive power.
 
-## Additional Model Performance Metrics
-This project goes beyond basic accuracy and incorporates advanced performance metrics. These include:
+## Building Model using CatBoost Algorithm
+### Model Training
+We created and trained the CatBoost model with 1000 iterations and a learning rate of 0.1. This state-of-the-art gradient boosting algorithm is ideal for regression tasks.
 
-- **ROC Curves:** Receiver Operating Characteristic curves offer a graphical representation of the model's ability to distinguish between classes. We calculate the ROC curve and Area Under the Curve (AUC) to assess the model's binary classification performance.
+### Model Evaluation
+Predictions were made on the validation set, and model performance was evaluated using the mean squared error (MSE). The CatBoost MSE on the validation set was calculated and recorded.
 
-- **Precision-Recall Curves:** Precision-Recall curves provide insights into the precision and recall trade-off. They are particularly important for imbalanced datasets and are used alongside the ROC curve for comprehensive model evaluation.
+### Make Predictions
+Predictions were extended to the test set, allowing us to assess the model's predictive capability. The CatBoost MSE on the test set was also computed and documented.
 
-## Next Steps
-To further enhance this project, consider the following actions:
+### Predicted vs. Actual Values
+A scatter plot was generated to visualize the relationship between actual and predicted values. This visualization aids in assessing the model's accuracy and identifying any patterns or discrepancies.
 
-- **Hyperparameter Tuning:** Optimize hyperparameters such as learning rate, batch size, and the number of hidden layers to improve model performance.
-
-- **Feature Engineering:** Experiment with feature selection and engineering techniques to identify the most informative features for the model.
-
-- **Different Architectures:** Explore various neural network architectures, such as convolutional neural networks (CNNs) or recurrent neural networks (RNNs), to assess their
-
-
+### Overall MSE for Catboost Algorithm
+The overall weighted MSE was calculated across all sets (training, validation, and test) to determine the model's overall performance. The result was recorded to provide a comprehensive evaluation of the CatBoost algorithm's effectiveness in predicting cirrhosis.
