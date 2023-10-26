@@ -24,11 +24,11 @@ Our first project embarks on a mission to redefine disease diagnosis, focusing i
 </details><br>
 
 <details>
-<summary>2.) Liver Cirrhosis Prediction in 3 Phases</summary>
+<summary>2.) Liver Cirrhosis Prediction</summary>
 
 The second project adopts a comprehensive approach to predict liver cirrhosis. As we traverse the three distinct phases of data preprocessing, exploratory data analysis, and model development, the profound impact of data quality and analysis on healthcare decisions becomes evident. These projects underscore the significance of precise predictions, steering the course of medical interventions and resource allocation towards the zenith of effectiveness.
 
-</details><br>
+</details><br><br><br>
 
 Explore the boundless possibilities of data-driven healthcare, where each prediction contributes to the individual's well-being. These projects symbolize a healthcare revolution that transcends boundaries and empowers us all.
 
@@ -36,6 +36,6 @@ Explore the boundless possibilities of data-driven healthcare, where each predic
 Visit the individual project folders for detailed documentation and code:
 
 - [Thyroid Cancer Diagnosis Prediction](./Thyroid%20Cancer)
-- [Liver Cirrhosis Prediction in 3 Phases](./Liver%20Cirrhosis%20Prediction)
+- [Liver Cirrhosis Prediction](./Liver%20Cirrhosis%20Prediction)
 
 Empower healthcare with data-driven insights.
