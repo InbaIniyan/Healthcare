@@ -84,3 +84,65 @@ A scatter plot was generated to visualize the relationship between actual and pr
 
 ### Overall MSE for Catboost Algorithm
 The overall weighted MSE was calculated across all sets (training, validation, and test) to determine the model's overall performance. The result was recorded to provide a comprehensive evaluation of the CatBoost algorithm's effectiveness in predicting cirrhosis.
+
+
+
+# Phase 2: Decision Tree Classifier for Cirrhosis Prediction
+
+## Introduction
+Phase 2 of this project builds upon the foundation laid in Phase 1. In this phase, we leverage the Decision Tree Classifier to continue our journey towards accurate cirrhosis prediction. Below, we provide an intricate account of each step taken in Phase 2.
+
+## 1. Importing Libraries
+We initiate Phase 2 by importing libraries essential for data analysis, visualization, and machine learning:
+
+- **pandas**: A versatile library for data manipulation and analysis.
+- **matplotlib and seaborn**: These libraries are essential for data visualization and creating insightful plots.
+- **sklearn (Scikit-learn)**: This rich library provides the Decision Tree Classifier, enabling us to build a predictive model.
+
+## 2. Loading Dataset
+Our journey continues with the cirrhosis dataset, loaded from the 'cirrhosis.csv' file using pandas. This dataset contains valuable information that will fuel our predictive modeling journey in Phase 2.
+
+## 3. Exploratory Data Analysis (EDA)
+In Phase 2, we delve deeper into data exploration:
+
+### i) Histogram of 'Age' Column
+We begin with a histogram of the 'Age' column, providing insights into the distribution of patient ages within the dataset. This visualization deepens our understanding of the age distribution within the dataset, which can be a crucial factor in cirrhosis prediction.
+
+### ii) Box Plot for Numeric Variables
+A box plot is constructed for 'Bilirubin' and 'Albumin', offering a visual representation of the central tendency and spread of these essential numeric features. Understanding the distribution of these variables is crucial for building an accurate predictive model.
+
+### iii) Count Plot for Categorical Variables
+We use a count plot to visualize the distribution of the 'Sex' variable. This visualization provides insights into the gender distribution within the dataset, an important aspect of cirrhosis prediction.
+
+### iv) Pairplot for Numerical Variables
+The exploration extends to a pairplot for 'Age', 'Bilirubin', and 'Albumin'. This pairwise visualization helps us understand the relationships between these numeric variables. It can reveal correlations and interactions that are valuable for building an accurate predictive model.
+
+## 4. Feature Selection
+Feature selection is a critical step in building an effective predictive model. In this phase, we select the following features for modeling:
+
+- 'Age'
+- 'Bilirubin'
+- 'Albumin'
+These features are essential for cirrhosis prediction and have been chosen based on their potential significance.
+
+## 5. Splitting Data
+Data splitting is a fundamental part of model evaluation. In Phase 2, the dataset is divided into training and test sets using an 80-20 split ratio. This division ensures that the model is trained on one portion of the data and tested on another, allowing us to assess its performance effectively.
+
+## 6. Model Training
+The Decision Tree Classifier is chosen as the machine learning model for this phase. We initiate the model training process using the training data. Decision trees are effective at capturing complex relationships in the data, making them suitable for predictive modeling.
+
+## 7. Testing Model
+The trained model is put to the test using the test dataset. This step involves making predictions for cirrhosis detection based on the features selected for modeling.
+
+## 8. Model Evaluation
+### i) Performance Metrics - Accuracy, Confusion Matrix, Classification Report
+The model's performance is evaluated through essential performance metrics, including:
+
+- Accuracy: This metric represents the model's overall correctness in making predictions. A high accuracy indicates that the model is effective in cirrhosis prediction.
+
+- Confusion Matrix: A confusion matrix is a tabulation of true positive, true negative, false positive, and false negative predictions. It provides a detailed breakdown of the model's performance.
+
+- Classification Report: A classification report offers a comprehensive summary of the model's performance, including metrics such as precision, recall, F1-score, and support for each class (in this case, cirrhosis status).
+
+### ii) Confusion Matrix Heatmap
+A heatmap of the confusion matrix is generated, enhancing the visual representation of the model's performance. This visualization helps in identifying true positive, true negative, false positive, and false negative predictions, which are crucial for understanding the model's performance.
