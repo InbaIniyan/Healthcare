@@ -1,148 +1,103 @@
-# Phase 1: CatBoost Model for Cirrhosis Prediction
+# Cirrhosis Prediction Project
 
-## Introduction
-Phase 1 of this project focuses on developing a predictive model for cirrhosis using the CatBoost algorithm. This phase entails comprehensive data preprocessing, exploratory data analysis (EDA), model development, and rigorous performance evaluation. Below is a detailed account of the steps taken in this phase.
+This project encompasses three distinct phases, each contributing to the development of an effective cirrhosis prediction model. The following provides an overview of the key steps and outcomes in each phase:
 
-## 1. Importing Libraries
-In the initial stage of our project, we imported the following libraries to facilitate data processing, visualization, and machine learning:
+---
 
-- **pandas**: Used for data manipulation and management.
-- **matplotlib and seaborn**: Employed for data visualization and creating insightful plots.
-- **sklearn (Scikit-learn)**: Provides various machine learning tools, such as train-test splitting and standardization.
-- **catboost**: Utilized for training the CatBoost regression model, a powerful gradient boosting algorithm.
+## Phase 1: CatBoost Model for Cirrhosis Prediction
 
-## 2. Loading Dataset
-We began by loading the cirrhosis dataset from the 'cirrhosis.csv' file using pandas. This dataset contains valuable information for our predictive modeling task.
+Phase 1 focuses on building a predictive model for cirrhosis using the CatBoost algorithm. This phase involves data preprocessing, exploratory data analysis (EDA), model development, and performance evaluation. 
 
-## 3. Data Preprocessing
-### i) Handling Missing Values for Numeric Columns
-To address missing values in numeric columns, we applied the following steps:
+<details>
+<summary>Click to Expand - Phase 1 Details</summary>
 
-- Identified numeric columns in the dataset.
-- Calculated the mean for each numeric column and imputed missing values with the corresponding means. This approach preserves the statistical characteristics of the data.
+### Importing Libraries
+Essential libraries for data processing, visualization, and machine learning are imported.
 
-### ii) Handling Missing Values for Categorical Columns
-For categorical columns, the process involved:
+### Loading Dataset
+The cirrhosis dataset ('cirrhosis.csv') is loaded, forming the foundation of our predictive model.
 
-- Identifying categorical columns in the dataset.
-- Replacing missing categorical values with the mode (most frequent value) of each respective column.
+### Data Preprocessing
+Missing values are handled, categorical variables are encoded, and numerical features are standardized.
 
-### iii) Encoding Categorical Variables
-To prepare the dataset for machine learning, we one-hot encoded the categorical variables, transforming them into a numerical format. This step ensures that the model can utilize these features effectively.
+### Exploratory Data Analysis (EDA)
+EDA includes histograms, box plots, feature selection, data splitting, model training, and performance evaluation with mean squared error (MSE).
 
-## 4. Data Splitting
-To evaluate our model's performance, we split the dataset into training, validation, and test sets. We used the following split ratios:
+</details>
 
-- 70% of the data for training.
-- 15% for validation.
-- 15% for testing.
+---
 
-## 5. Feature Scaling
-Feature scaling is a crucial preprocessing step to ensure that all features have a similar scale. We utilized the StandardScaler from sklearn to standardize the features, making them suitable for CatBoost.
+## Phase 2: Decision Tree Classifier for Cirrhosis Prediction
 
-## 6. Exploratory Data Analysis (EDA)
-### i) Histogram for Numeric Variables
-To gain insights into the distribution of numeric variables, we created histograms with 20 bins. These visualizations allow us to assess data density and observe data spread.
+In Phase 2, the Decision Tree Classifier is employed to enhance the cirrhosis prediction model. This phase encompasses data loading, extensive EDA, feature selection, data splitting, model training, and evaluation.
 
-### ii) Boxplots for Numeric Variables
-Box plots were constructed for numeric variables, providing a comprehensive view of the data's central tendency, spread, and potential outliers. Understanding the distribution of numeric features is essential for model development.
+<details>
+<summary>Click to Expand - Phase 2 Details</summary>
 
-### iii) Count Plots for Categorical Variables
-For categorical variables, count plots were generated, focusing on the "Status" feature. This enabled us to visualize the distribution of cirrhosis statuses.
+### Importing Libraries
+Essential libraries for data analysis, visualization, and machine learning are imported.
 
-## 7. Correlation Analysis
-We conducted a correlation analysis to identify relationships between variables. The correlation matrix was visualized using a heatmap, providing a clear view of variable dependencies and interactions.
+### Loading Dataset
+The cirrhosis dataset ('cirrhosis.csv') is loaded to facilitate the construction of the predictive model.
 
-## 8. Target Variable Distribution
-We used a count plot to visualize the distribution of the target variable, "Stage." Understanding the distribution of cirrhosis stages is essential for model evaluation and interpretation.
+### Exploratory Data Analysis (EDA)
+This phase includes visualizations such as histograms, box plots, count plots, and pairplots for an in-depth understanding of the dataset.
 
-## 9. Feature Relationships
-### i) Scatter Plots for Numeric Features
-To explore the relationship between "Bilirubin" and the target variable "Stage," we created scatter plots. This visualization helps us understand how "Bilirubin" affects cirrhosis stage.
+### Feature Selection
+Relevant features ('Age', 'Bilirubin', and 'Albumin') are chosen for modeling.
 
-### ii) Categorical Feature Analysis
-We conducted a categorical feature analysis by creating contingency tables for gender ("Sex") and "Stage." These tables provided insights into how gender relates to cirrhosis stage.
+### Splitting Data
+The dataset is split into training and test sets for model evaluation.
 
-## 10. Outlier Detection
-We utilized box plots to detect outliers in the "Age" column. Identifying outliers is essential for model robustness and accurate predictions.
-
-## 11. Feature Engineering
-Feature engineering is a crucial step in model development. In this phase, we engineered a new feature, "BMI," based on "Age" and "Cholesterol." This feature enhances the dataset's predictive power.
-
-## Building Model using CatBoost Algorithm
 ### Model Training
-We created and trained the CatBoost model with 1000 iterations and a learning rate of 0.1. This state-of-the-art gradient boosting algorithm is ideal for regression tasks.
+The Decision Tree Classifier undergoes training to capture complex relationships in the data.
 
 ### Model Evaluation
-Predictions were made on the validation set, and model performance was evaluated using the mean squared error (MSE). The CatBoost MSE on the validation set was calculated and recorded.
+Performance metrics, including accuracy, a confusion matrix heatmap, and a comprehensive classification report, are employed for assessment.
 
-### Make Predictions
-Predictions were extended to the test set, allowing us to assess the model's predictive capability. The CatBoost MSE on the test set was also computed and documented.
+</details>
 
-### Predicted vs. Actual Values
-A scatter plot was generated to visualize the relationship between actual and predicted values. This visualization aids in assessing the model's accuracy and identifying any patterns or discrepancies.
+---
 
-### Overall MSE for Catboost Algorithm
-The overall weighted MSE was calculated across all sets (training, validation, and test) to determine the model's overall performance. The result was recorded to provide a comprehensive evaluation of the CatBoost algorithm's effectiveness in predicting cirrhosis.
+## Phase 3: Survival Analysis and Artificial Neural Network (ANN) for Cirrhosis Prediction
 
+Phase 3 introduces survival analysis and an Artificial Neural Network (ANN) for advanced cirrhosis prediction. It involves data loading, extensive data preprocessing, exploratory data analysis, target variable definition, data splitting, model building, and comprehensive performance evaluation.
 
+<details>
+<summary>Click to Expand - Phase 3 Details</summary>
 
-# Phase 2: Decision Tree Classifier for Cirrhosis Prediction
+### Importing Libraries
+Essential libraries are imported for efficient dataset management and advanced machine learning model development.
 
-## Introduction
-Phase 2 of this project builds upon the foundation laid in Phase 1. In this phase, we leverage the Decision Tree Classifier to continue our journey towards accurate cirrhosis prediction. Below, we provide an intricate account of each step taken in Phase 2.
+### Loading Dataset
+The 'cirrhosis.csv' dataset is loaded into a Pandas DataFrame to serve as the foundation for this phase.
 
-## 1. Importing Libraries
-We initiate Phase 2 by importing libraries essential for data analysis, visualization, and machine learning:
+### Data Preprocessing
+Handling missing values, encoding categorical variables, and standardizing numerical features are crucial steps in preparing the dataset for advanced modeling.
 
-- **pandas**: A versatile library for data manipulation and analysis.
-- **matplotlib and seaborn**: These libraries are essential for data visualization and creating insightful plots.
-- **sklearn (Scikit-learn)**: This rich library provides the Decision Tree Classifier, enabling us to build a predictive model.
+### Exploratory Data Analysis (EDA)
+EDA includes visualizations like Kaplan-Meier survival curves, log-rank tests, and survival probability heatmaps to gain deeper insights.
 
-## 2. Loading Dataset
-Our journey continues with the cirrhosis dataset, loaded from the 'cirrhosis.csv' file using pandas. This dataset contains valuable information that will fuel our predictive modeling journey in Phase 2.
+### Defining Target Variable
+The target variable, 'time_to_event,' represents the time until an event occurs, typically the time to death.
 
-## 3. Exploratory Data Analysis (EDA)
-In Phase 2, we delve deeper into data exploration:
+### Splitting Dataset
+Data splitting is essential for model development and evaluation, ensuring the dataset is appropriately divided.
 
-### i) Histogram of 'Age' Column
-We begin with a histogram of the 'Age' column, providing insights into the distribution of patient ages within the dataset. This visualization deepens our understanding of the age distribution within the dataset, which can be a crucial factor in cirrhosis prediction.
+### Model Building & Compiling
+An Artificial Neural Network (ANN) model tailored for survival analysis is constructed and compiled with an appropriate loss function and optimizer.
 
-### ii) Box Plot for Numeric Variables
-A box plot is constructed for 'Bilirubin' and 'Albumin', offering a visual representation of the central tendency and spread of these essential numeric features. Understanding the distribution of these variables is crucial for building an accurate predictive model.
+### Model Training
+The ANN model undergoes training on the training data.
 
-### iii) Count Plot for Categorical Variables
-We use a count plot to visualize the distribution of the 'Sex' variable. This visualization provides insights into the gender distribution within the dataset, an important aspect of cirrhosis prediction.
+### Model Predictions
+The trained ANN model is applied to the testing data for predictions, and its performance is assessed using the concordance index (C-index).
 
-### iv) Pairplot for Numerical Variables
-The exploration extends to a pairplot for 'Age', 'Bilirubin', and 'Albumin'. This pairwise visualization helps us understand the relationships between these numeric variables. It can reveal correlations and interactions that are valuable for building an accurate predictive model.
+### Model Performance Evaluation
+A binary classification threshold is introduced, and key performance metrics, including accuracy, precision, recall, F1-score, and ROC AUC score, are calculated for a comprehensive model evaluation.
 
-## 4. Feature Selection
-Feature selection is a critical step in building an effective predictive model. In this phase, we select the following features for modeling:
+</details>
 
-- 'Age'
-- 'Bilirubin'
-- 'Albumin'
-These features are essential for cirrhosis prediction and have been chosen based on their potential significance.
+---
 
-## 5. Splitting Data
-Data splitting is a fundamental part of model evaluation. In Phase 2, the dataset is divided into training and test sets using an 80-20 split ratio. This division ensures that the model is trained on one portion of the data and tested on another, allowing us to assess its performance effectively.
-
-## 6. Model Training
-The Decision Tree Classifier is chosen as the machine learning model for this phase. We initiate the model training process using the training data. Decision trees are effective at capturing complex relationships in the data, making them suitable for predictive modeling.
-
-## 7. Testing Model
-The trained model is put to the test using the test dataset. This step involves making predictions for cirrhosis detection based on the features selected for modeling.
-
-## 8. Model Evaluation
-### i) Performance Metrics - Accuracy, Confusion Matrix, Classification Report
-The model's performance is evaluated through essential performance metrics, including:
-
-- Accuracy: This metric represents the model's overall correctness in making predictions. A high accuracy indicates that the model is effective in cirrhosis prediction.
-
-- Confusion Matrix: A confusion matrix is a tabulation of true positive, true negative, false positive, and false negative predictions. It provides a detailed breakdown of the model's performance.
-
-- Classification Report: A classification report offers a comprehensive summary of the model's performance, including metrics such as precision, recall, F1-score, and support for each class (in this case, cirrhosis status).
-
-### ii) Confusion Matrix Heatmap
-A heatmap of the confusion matrix is generated, enhancing the visual representation of the model's performance. This visualization helps in identifying true positive, true negative, false positive, and false negative predictions, which are crucial for understanding the model's performance.
+In summary, this project encompasses three phases, each building upon the previous one, to develop an effective cirrhosis prediction model. These phases encompass data preprocessing, exploratory data analysis, model development, and thorough performance evaluation.
