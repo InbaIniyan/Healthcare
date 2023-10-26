@@ -16,18 +16,16 @@ Our path is illuminated by core healthcare concepts that shape the future of med
 
 - **Patient-Centric Approach:** Placing the patient at the heart of our endeavors, with an unwavering commitment to improved diagnostics and healthcare decisions.
 
-## **Thyroid Cancer Diagnosis Prediction: Unlocking Early Detection**
 <details>
-<summary>Click for Overview</summary>
+<summary>Thyroid Cancer Diagnosis Prediction</summary>
 
 Our first project embarks on a mission to redefine disease diagnosis, focusing its gaze intently on thyroid cancer. Early detection forms the bedrock of effective healthcare, and this project is a testament to the power of predictive modeling. It identifies thyroid cancer cases at their earliest stages, enhancing the prospects of proactive healthcare interventions. Advanced performance metrics and a roadmap for future enhancements light our way forward.
 
 </details>
 
-## **Liver Cirrhosis Prediction in 3 Phases: Precision in Healthcare Decisions**
 <details>
-<summary>Click for Overview</summary>
-  
+<summary>Liver Cirrhosis Prediction in 3 Phases</summary>
+
 The second project adopts a comprehensive approach to predict liver cirrhosis. As we traverse the three distinct phases of data preprocessing, exploratory data analysis, and model development, the profound impact of data quality and analysis on healthcare decisions becomes evident. These projects underscore the significance of precise predictions, steering the course of medical interventions and resource allocation towards the zenith of effectiveness.
 
 </details>
