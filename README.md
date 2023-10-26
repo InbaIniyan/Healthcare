@@ -14,21 +14,21 @@ Our path is illuminated by core healthcare concepts that shape the future of med
 
 - **Optimized Resource Allocation:** Ensuring healthcare resources are judiciously directed, guaranteeing patients access to timely and efficient care.
 
-- **Patient-Centric Approach:** Placing the patient at the heart of our endeavors, with an unwavering commitment to improved diagnostics and healthcare decisions.
+- **Patient-Centric Approach:** Placing the patient at the heart of our endeavors, with an unwavering commitment to improved diagnostics and healthcare decisions.<br>
 
 <details>
-<summary>Thyroid Cancer Diagnosis Prediction</summary>
+<summary>1.) Thyroid Cancer Diagnosis Prediction</summary>
 
 Our first project embarks on a mission to redefine disease diagnosis, focusing its gaze intently on thyroid cancer. Early detection forms the bedrock of effective healthcare, and this project is a testament to the power of predictive modeling. It identifies thyroid cancer cases at their earliest stages, enhancing the prospects of proactive healthcare interventions. Advanced performance metrics and a roadmap for future enhancements light our way forward.
 
-</details>
+</details><br>
 
 <details>
-<summary>Liver Cirrhosis Prediction in 3 Phases</summary>
+<summary>2.) Liver Cirrhosis Prediction in 3 Phases</summary>
 
 The second project adopts a comprehensive approach to predict liver cirrhosis. As we traverse the three distinct phases of data preprocessing, exploratory data analysis, and model development, the profound impact of data quality and analysis on healthcare decisions becomes evident. These projects underscore the significance of precise predictions, steering the course of medical interventions and resource allocation towards the zenith of effectiveness.
 
-</details>
+</details><br>
 
 Explore the boundless possibilities of data-driven healthcare, where each prediction contributes to the individual's well-being. These projects symbolize a healthcare revolution that transcends boundaries and empowers us all.
 
