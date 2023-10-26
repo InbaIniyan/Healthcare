@@ -48,7 +48,7 @@ To run this project on your local environment, follow these steps:
 
 1. Ensure you have the required libraries installed. You can install them using pip:
 
-        pip install pandas numpy tensorflow scikit-learn matplotlib seaborn
+       pip install pandas numpy tensorflow scikit-learn matplotlib seaborn
 
 2. Download the dataset 'Thyroid_train.csv' and place it in the project directory.
 
@@ -68,6 +68,4 @@ To further enhance this project, consider the following actions:
 
 - **Feature Engineering:** Experiment with feature selection and engineering techniques to identify the most informative features for the model.
 
-- **Different Architectures:** Explore various neural network architectures, such as convolutional neural networks (CNNs) or recurrent neural networks (RNNs), to assess their
-
-
+- **Different Architectures:** Explore various neural network architectures, such as convolutional neural networks (CNNs) or recurrent neural networks (RNNs), to assess their suitability for breast cancer diagnosis prediction. Experimenting with alternative architectures can lead to improved model performance and provide valuable insights into the data's characteristics.
