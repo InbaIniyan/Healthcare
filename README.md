@@ -28,7 +28,7 @@ Our first project embarks on a mission to redefine disease diagnosis, focusing i
 
 The second project adopts a comprehensive approach to predict liver cirrhosis. As we traverse the three distinct phases of data preprocessing, exploratory data analysis, and model development, the profound impact of data quality and analysis on healthcare decisions becomes evident. These projects underscore the significance of precise predictions, steering the course of medical interventions and resource allocation towards the zenith of effectiveness.
 
-</details><br><br>
+</details><br>
 
 Explore the boundless possibilities of data-driven healthcare, where each prediction contributes to the individual's well-being. These projects symbolize a healthcare revolution that transcends boundaries and empowers us all.
 
