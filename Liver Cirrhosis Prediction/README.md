@@ -111,7 +111,7 @@ To run this project on your local environment, follow these steps:
 
 1. **Ensure you have the required libraries installed.** You can install them using pip:
    
-       pip install pandas numpy tensorflow scikit-learn matplotlib seaborn
+       pip install pandas numpy tensorflow scikit-learn matplotlib seaborn catboost lifelines
 
 2. **Download the dataset 'cirrhosis.csv' and place it in the project directory.
 
