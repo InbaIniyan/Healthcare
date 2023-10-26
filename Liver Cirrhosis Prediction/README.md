@@ -101,3 +101,30 @@ A binary classification threshold is introduced, and key performance metrics, in
 ---
 
 In summary, this project encompasses three phases, each building upon the previous one, to develop an effective cirrhosis prediction model. These phases encompass data preprocessing, exploratory data analysis, model development, and thorough performance evaluation.
+
+## How to Run
+To run this project on your local environment, follow these steps:
+
+1. **Ensure you have the required libraries installed.** You can install them using pip:
+   
+       pip install pandas numpy tensorflow scikit-learn matplotlib seaborn
+
+2. **Download the dataset 'cirrhosis.csv' and place it in the project directory.
+
+3. **Execute the provided Python script to run the project.**
+
+## Additional Model Performance Metrics
+This project goes beyond basic accuracy and incorporates advanced performance metrics. These include:
+
+- **ROC Curves:** Receiver Operating Characteristic curves offer a graphical representation of the model's ability to distinguish between classes. We calculate the ROC curve and Area Under the Curve (AUC) to assess the model's binary classification performance.
+
+- **Precision-Recall Curves:** Precision-Recall curves provide insights into the precision and recall trade-off. They are particularly important for imbalanced datasets and are used alongside the ROC curve for comprehensive model evaluation.
+
+## Next Steps
+To further enhance this project, consider the following actions:
+
+- **Hyperparameter Tuning:** Optimize hyperparameters such as learning rate, batch size, and the number of hidden layers to improve model performance.
+
+- **Feature Engineering:** Experiment with feature selection and engineering techniques to identify the most informative features for the model.
+
+- **Different Architectures:** Explore various neural network architectures, such as convolutional neural networks (CNNs) or recurrent neural networks (RNNs), to assess their impact on predictive accuracy.
