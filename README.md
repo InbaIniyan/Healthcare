@@ -24,7 +24,7 @@ Our first project embarks on a mission to redefine disease diagnosis, focusing i
 </details><br>
 
 <details>
-<summary>**2.) Liver Cirrhosis Prediction**</summary>
+**<summary>2.) Liver Cirrhosis Prediction</summary>**
 
 The second project adopts a comprehensive approach to predict liver cirrhosis. As we traverse the three distinct phases of data preprocessing, exploratory data analysis, and model development, the profound impact of data quality and analysis on healthcare decisions becomes evident. These projects underscore the significance of precise predictions, steering the course of medical interventions and resource allocation towards the zenith of effectiveness.
 
